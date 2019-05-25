@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
 public class Produto implements Serializable{//Serializable uma interface os objeto podem ser convertido para bytes, para travegar na internet
 
@@ -22,6 +24,7 @@ public class Produto implements Serializable{//Serializable uma interface os obj
 	private String nome;
 	private Double preco;
 	
+	@JsonBackReference //Do outro lado da associação ja foi buscado então omiti ela
 	@ManyToMany
 	@JoinTable(name = "PRODUTO_CATEGORIA",
 		joinColumns = @JoinColumn(name = "produto_id"),
