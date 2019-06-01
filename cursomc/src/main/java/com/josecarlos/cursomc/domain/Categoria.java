@@ -10,8 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 @Entity
 public class Categoria implements Serializable{ //Serializable uma interface os objeto podem ser convertido para bytes, para travegar na internet
 	
@@ -23,7 +21,7 @@ public class Categoria implements Serializable{ //Serializable uma interface os 
 	private Integer id;
 	private String nome;
 	
-	@JsonManagedReference //para vim os Objetos associados a essa classe
+	 //para vim os Objetos associados a essa classe / apos foi utilizado o @JsonIgnore onde so no vai @JsonBackReference e o @JsonManagedReferece é apagado
 	@ManyToMany(mappedBy="categorias")
 	private List<Produto> produtos = new ArrayList<>();
 	
