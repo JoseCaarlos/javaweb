@@ -15,7 +15,7 @@ public class ClienteService {
 	@Autowired // Essa depedencia instancia automaticamente;
 	private ClienteRepository repo;
 	
-	public Cliente buscar(Integer id) {
+	public Cliente find(Integer id) {
 		Optional<Cliente> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
 				"O Objeto não encontrado! ID: " + id

@@ -15,7 +15,7 @@ public class CategoriaService {
 	@Autowired // Essa depedencia instancia automaticamente;
 	private CategoriaRepository repo;
 	
-	public Categoria buscar(Integer id) {
+	public Categoria find(Integer id) {
 		Optional<Categoria> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
 				"O Objeto não encontrado! ID: " + id
@@ -24,6 +24,12 @@ public class CategoriaService {
 	
 	public Categoria insert(Categoria obj) {
 		obj.setId(null);
+		return repo.save(obj);
+	}
+
+	//Igual o salvar verificando somente se o ID é nulo
+	public Categoria update(Categoria obj) {
+		find(obj.getId());
 		return repo.save(obj);
 	}
 }
