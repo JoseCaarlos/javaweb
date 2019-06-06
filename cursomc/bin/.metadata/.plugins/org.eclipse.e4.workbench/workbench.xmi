@@ -363,7 +363,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aN37YIeBEemYZtX8c-beiQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_aOdKMIeBEemYZtX8c-beiQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_YDxbg4eBEemYZtX8c-beiQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_YS_YEIf6EembjezwapNM-w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_YDxbg4eBEemYZtX8c-beiQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aN4icIeBEemYZtX8c-beiQ" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -391,7 +391,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aN5JgIeBEemYZtX8c-beiQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_aOeYUIeBEemYZtX8c-beiQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_YDw0U4eBEemYZtX8c-beiQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_YTIiAIf6EembjezwapNM-w" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_YDw0U4eBEemYZtX8c-beiQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aN5wkIeBEemYZtX8c-beiQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1621,7 +1621,7 @@
   <commands xmi:id="_YDqGqYeBEemYZtX8c-beiQ" elementId="org.eclipse.wst.jsdt.ui.edit.text.java.create.getter.setter" commandName="Generate Getters and Setters" description="Generate Getter and Setter functions for type's vars" category="_YDnDQ4eBEemYZtX8c-beiQ"/>
   <commands xmi:id="_YDqGqoeBEemYZtX8c-beiQ" elementId="org.eclipse.ui.edit.findReplace" commandName="Find and Replace" description="Find and replace text" category="_YDmcM4eBEemYZtX8c-beiQ"/>
   <commands xmi:id="_YDqGq4eBEemYZtX8c-beiQ" elementId="org.eclipse.egit.ui.team.MergeTool" commandName="Merge Tool" category="_YDnDV4eBEemYZtX8c-beiQ"/>
-  <commands xmi:id="_YDqGrIeBEemYZtX8c-beiQ" elementId="org.eclipse.pde.ui.addAllPluginsToJavaSearch" commandName="Add All Plug-ins to Java Search" description="Adds all plug-ins in the target platform to java search" category="_YDnDXoeBEemYZtX8c-beiQ"/>
+  <commands xmi:id="_YDqGrIeBEemYZtX8c-beiQ" elementId="org.eclipse.pde.ui.addAllPluginsToJavaSearch" commandName="Add All Plug-ins to Java Workspace Scope" description="Adds all plug-ins in the target platform to Java workspace scope" category="_YDnDXoeBEemYZtX8c-beiQ"/>
   <commands xmi:id="_YDqGrYeBEemYZtX8c-beiQ" elementId="org.eclipse.egit.ui.command.shareProject" commandName="Share with Git" description="Share the project using Git" category="_YDnDXoeBEemYZtX8c-beiQ">
     <parameters xmi:id="_YDqGroeBEemYZtX8c-beiQ" elementId="org.eclipse.egit.ui.command.projectNameParameter" name="Project" optional="false"/>
   </commands>
@@ -2602,6 +2602,7 @@
   <commands xmi:id="_aI4GoYeBEemYZtX8c-beiQ" elementId="AUTOGEN:::variableViewActions/org.eclipse.wst.jsdt.debug.ui.variableview.show.functions" commandName="Show function variables" description="Show or hide function variables" category="_YDnDXoeBEemYZtX8c-beiQ"/>
   <commands xmi:id="_aI4GooeBEemYZtX8c-beiQ" elementId="AUTOGEN:::variableViewActions/org.eclipse.wst.jsdt.debug.ui.variableview.show.this" commandName="Show 'this' variable" description="Show or hide the this variable" category="_YDnDXoeBEemYZtX8c-beiQ"/>
   <commands xmi:id="_aI4tsIeBEemYZtX8c-beiQ" elementId="AUTOGEN:::variableViewActions/org.eclipse.wst.jsdt.debug.ui.variableview.show.prototypes" commandName="Show proto variables" description="Show or hide proto variables" category="_YDnDXoeBEemYZtX8c-beiQ"/>
+  <commands xmi:id="_XuVy4If6EembjezwapNM-w" elementId="org.eclipse.egit.ui.RepositoriesViewShowInSystemExplorer" commandName="Show In System Explorer" category="_YDnDV4eBEemYZtX8c-beiQ"/>
   <addons xmi:id="_YBlqC4eBEemYZtX8c-beiQ" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_YBlqDIeBEemYZtX8c-beiQ" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_YBlqDYeBEemYZtX8c-beiQ" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -2613,7 +2614,7 @@
   <addons xmi:id="_YBlqE4eBEemYZtX8c-beiQ" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_YBlqFIeBEemYZtX8c-beiQ" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_YCEyMIeBEemYZtX8c-beiQ" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_XwcrsIf6EembjezwapNM-w" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_YDmcMIeBEemYZtX8c-beiQ" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_YDmcMYeBEemYZtX8c-beiQ" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
