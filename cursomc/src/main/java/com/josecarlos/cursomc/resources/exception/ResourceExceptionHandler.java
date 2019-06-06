@@ -27,10 +27,9 @@ public class ResourceExceptionHandler {
 		StandardError err = new StandardError (HttpStatus.BAD_REQUEST.value(),e.getMessage(),System.currentTimeMillis());
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(err);
 	}
-	
-	
-	
+	//Method para erros de validação
 	@ExceptionHandler(MethodArgumentNotValidException.class)//Tratador de Excessões
+	
 	public ResponseEntity<StandardError> validation(MethodArgumentNotValidException e, HttpServletRequest request){
 		
 		ValidationError err = new ValidationError(HttpStatus.BAD_REQUEST.value(),"Erro de Validação",System.currentTimeMillis());
