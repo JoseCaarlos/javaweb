@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -31,8 +32,8 @@ public class Cliente implements Serializable{ //Serializable uma interface os ob
 	private String cpfOuCnpj;
 	private Integer tipo;
 	
-
-	@OneToMany(mappedBy="cliente")
+									//Caso o cliente seja apagado o endereço é também
+	@OneToMany(mappedBy="cliente", cascade = CascadeType.ALL)
 	private List<Endereco> enderecos = new ArrayList<>();
 	
 	//Set é uma coleção onde n pode ter repeticao
