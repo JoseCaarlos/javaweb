@@ -82,7 +82,7 @@ public class ClienteResource {
 	public ResponseEntity<Void> insert(@Validated @RequestBody ClienteNewDTO objDto) {
 		Cliente obj = service.fromDTO(objDto);
 		obj = service.insert(obj);
-		// URI é para acrescentar o id depois da / em categorias
+		//URI é para acrescentar o id depois da / em categorias
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		return ResponseEntity.created(uri).build();
 	}
