@@ -11,11 +11,13 @@ import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.josecarlos.cursomc.domain.enums.EstadoPagamento;
 
 @Entity
 //Define como é criado as tabelas que têm depedência
 @Inheritance(strategy=InheritanceType.JOINED)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "@type")
 public abstract class Pagamento implements Serializable{ //Serializable uma interface os objeto podem ser convertido para bytes, para travegar na internet
 	
 	//Versão da classe

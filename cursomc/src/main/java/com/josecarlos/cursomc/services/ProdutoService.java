@@ -10,6 +10,7 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.josecarlos.cursomc.domain.Categoria;
+import com.josecarlos.cursomc.domain.Cliente;
 import com.josecarlos.cursomc.domain.Produto;
 import com.josecarlos.cursomc.repositories.CategoriaRepository;
 import com.josecarlos.cursomc.repositories.ProdutoRepository;
@@ -30,6 +31,11 @@ public class ProdutoService {
 				"O Objeto não encontrado! ID: " + id
 						+ ", Tipo" + Produto.class.getName()));
 	}
+	
+	public List<Produto> findAll(){
+		return repo.findAll();
+	}
+	
 	
 	public Page<Produto> search(String nome, List<Integer> ids, Integer page, Integer linesPerPage, String orderBy, String direction) {
 		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);

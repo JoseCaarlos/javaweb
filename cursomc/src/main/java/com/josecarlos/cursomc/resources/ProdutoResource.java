@@ -2,7 +2,7 @@ package com.josecarlos.cursomc.resources;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.stream.Collectors;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +14,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.josecarlos.cursomc.domain.Cliente;
 import com.josecarlos.cursomc.domain.Produto;
+import com.josecarlos.cursomc.dto.ClienteDTO;
 import com.josecarlos.cursomc.dto.ProdutoDTO;
 import com.josecarlos.cursomc.resources.utils.URL;
 import com.josecarlos.cursomc.services.ProdutoService;
 
 
 @RestController
-@RequestMapping(value="produtos")
+@RequestMapping(value="/produtos")
 public class ProdutoResource {
 
 	@Autowired
@@ -33,7 +35,7 @@ public class ProdutoResource {
 		return ResponseEntity.ok().body(obj);
 	}
 
-	@RequestMapping(method=RequestMethod.GET)
+	@RequestMapping(value="/page",method=RequestMethod.GET)
 	public ResponseEntity<Page<ProdutoDTO>> findPage(
 			@RequestParam(value="nome", defaultValue="") String nome, 
 			@RequestParam(value="categorias", defaultValue="") String categorias, 
@@ -46,6 +48,16 @@ public class ProdutoResource {
 		Page<Produto> list = service.search(nomeDecoded, ids, page, linesPerPage, orderBy, direction);
 		Page<ProdutoDTO> listDto = list.map(obj -> new ProdutoDTO(obj));  
 		return ResponseEntity.ok().body(listDto);
+	}
+	
+	@RequestMapping(method = RequestMethod.GET) // Obtendo dado por isso o GET
+	public ResponseEntity<List<ProdutoDTO>> findAll() {
+		List<Produto> list = service.findAll();
+		
+		//O stream faz percorre todos os elementos de uma list , 
+		List<ProdutoDTO> listDTO = list.stream().map(obj-> new ProdutoDTO(obj)).collect(Collectors.toList());
+		
+		return ResponseEntity.ok().body(listDTO);
 	}
 
 }
